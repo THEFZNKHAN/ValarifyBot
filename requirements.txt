@@ -1,5 +1,4 @@
 discord.py[voice]
-youtube-dl
 yt-dlp
 ffmpeg
 python-dotenv
