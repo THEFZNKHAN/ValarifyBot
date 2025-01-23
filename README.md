@@ -1,57 +1,118 @@
-## VALARIFY DISCORD BOT
+# Valarify Music Bot
 
-### Description
+## 🎵 Overview
+Valarify Music Bot is a feature-rich Discord music bot that allows users to play, download, and manage music directly in their Discord voice channels. With a wide range of commands, users can easily interact with music from YouTube and local sources.
 
-Valarify is a Discord bot designed to play music in your server. It is built using Python and leverages the discord.py library to interact with the Discord API.
+## ✨ Features
+- Download audio from YouTube
+- Play music from YouTube URLs
+- Play local music files
+- Advanced queue management
+- Multiple playback controls
 
-### Features
+## 🛠 Prerequisites
+Before setting up the bot, ensure you have the following installed:
 
-- Play music from YouTube
-- Queue system for managing songs
+### Software Requirements
+- Python 3.8+
+- FFmpeg
+- pip (Python package manager)
 
-### Installation
+### Required Python Packages
+- discord.py[voice]
+- python-dotenv
+- yt-dlp
+- asyncio
+- python-dotenv
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/thefznkhan/ValarifyBot.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd ValarifyBot
-    ```
-3. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+## 🚀 Installation
 
-### Configuration
+### 1. Clone the Repository
+```bash
+git clone https://github.com/thefznkhan/ValarifyBot.git
+cd ValarifyBot
+```
 
-1. Create a `.env` file in the project directory and add your Discord bot token:
-    ```
-    BOT_TOKEN=your_discord_bot_token
-    ```
+### 2. Create a Virtual Environment (Optional but Recommended)
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
 
-### Usage
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-1. Run the bot:
-    ```bash
-    python bot.py
-    ```
-2. Invite the bot to your Discord server using the OAuth2 URL generated from the Discord Developer Portal.
+### 4. FFmpeg Installation
+- **Windows**: Download from [FFmpeg Official Site](https://ffmpeg.org/download.html) and add to PATH
+- **macOS**: `brew install ffmpeg`
+- **Linux**: `sudo apt-get install ffmpeg`
 
-### Commands
+### 5. Discord Bot Setup
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
+2. Create a new application
+3. Navigate to the "Bot" section and create a bot
+4. Copy the bot token
 
-- `!join`: Bot join your voice channel
-- `!leave`: Bot leave you voice channel
-- `!play <url>`: Play a song from a YouTube URL and add new song to the queue
-- `!play_local <song_name>`: Play a song from local files
-- `!test_audio`: Play testing audio
-- `!stop`: Stop the song
+### 6. Configuration
+Create a `.env` file in the project root:
+```
+BOT_TOKEN=your_discord_bot_token_here
+```
 
-### Contributing
+## 🎮 Commands
 
-Feel free to submit issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
+### Music Playback
+- `!join`: Make the bot join your voice channel
+- `!leave`: Make the bot leave the voice channel
+- `!play <YouTube URL>`: Play a song from YouTube
+- `!download_audio <YouTube URL>`: Download and queue a song
+- `!play_local <filename>`: Play a local music file
 
-### License
+### Queue Management
+- `!queue` or `!q`: Show current music queue
+- `!next` or `!skip`: Skip to the next song
+- `!previous`: Go back to the previous song
+- `!clear`: Stop music and clear queue
+- `!pause`: Pause current song
+- `!resume`: Resume paused song
 
-This project is licensed under the MIT License.
+
+## 📁 Project Structure
+```
+ValarifyBot/
+│
+├── bot.py           # Main bot configuration
+├── .env             # Environment variables
+├── requirements.txt # Python dependencies
+│
+├── cogs/
+│   └── music.py     # Music-related commands
+│
+├── utils/
+│   └── queue.py     # Music queue management
+│
+└── music/           # Local music storage
+```
+
+## 🔧 Troubleshooting
+- Ensure bot has proper permissions in Discord
+- Check that FFmpeg is correctly installed
+- Verify all dependencies are installed
+- Check Discord bot token is correct
+
+## 🤝 Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## ⚖️ License
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 📞 Contact
+Faizan Khan - [fkhan20040@gmail.com](mailto:fkhan20040@gmail.com)
+
+Project Link: [https://github.com/thefznkhan/ValarifyBot](https://github.com/thefznkhan/ValarifyBot)
