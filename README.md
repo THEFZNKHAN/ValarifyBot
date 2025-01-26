@@ -75,7 +75,7 @@ BOT_TOKEN=your_discord_bot_token_here
 - `!next` or `!skip`: Skip to the next song
 - `!previous`: Go back to the previous song
 - `!clear`: Stop music and clear queue
-- `!pause`: Pause current song
+- `!pause` or `!stop`: Pause current song
 - `!resume`: Resume paused song
 
 
