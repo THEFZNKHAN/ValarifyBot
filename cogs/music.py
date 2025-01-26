@@ -69,7 +69,7 @@ class Music(commands.Cog):
 
         await ctx.send("Stopped the music and cleared the queue.")
 
-    @commands.command()
+    @commands.command(aliases=["stop"])
     async def pause(self, ctx):
         if not ctx.voice_client:
             await ctx.send("I'm not connected to a voice channel.")
